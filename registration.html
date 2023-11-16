@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registration Page</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Web Development" />
+        <meta name="keywords"    content="HTML and CSS" />
+        <meta name="author"      content="Jason Stanley" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style/registration.css" rel="stylesheet"/>
+        <script type="text/javascript" src="script/registration.js"></script>
+        <script type="text/javascript" src="script/jquery-1.9.1.min.js"></script>
+    </head>
+    <body>
+         <!-- Navigation Bar-->
+    <header>   
+         <nav> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="registration.html">Registration</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="features.html">Features</a></li>      
+            </ul>
+        </nav>
+
+        <!-- Logo -->
+        <div id="logo">
+            BRUNO PIZZERIA
+        </div>
+    </header> 
+    <br/>
+    <hr/>
+
+
+        <!-- Registration -->
+    <main>
+        <article>
+            <h2 id="registerhere"><u>Register Here!</u></h2>
+        </article>
+    </main>
+    <br/>
+        <!-- Form -->
+            <form id="regForm"
+			method="post"
+			action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php">
+		    <fieldset>
+
+                <!-- Account Information -->
+
+			    <legend>Account Information</legend>
+			    <div class="textinput">
+                    
+                    <!-- User Id -->
+
+				    <label for="sid">User ID</label>
+				    <input id="sid" type="text" name="id" />
+                </div>
+                
+                    <!-- Password -->
+
+			    <div class="textinput" id="length"> 
+				    <label for="pwd1">Password</label>
+				    <input id="pwd1" type="password" name="pwd1" />
+                </div>
+                
+                    <!-- Confirm Password -->
+
+			    <div class="textinput">
+				    <label for="pwd2">Retype Password</label>
+				    <input id="pwd2" type="password" name="pwd2" />
+			    </div>
+		    </fieldset>
+		    <fieldset>
+                    <!-- User Information -->
+			    <legend>User Information</legend>
+			    <div class="textinput">
+
+                    <!-- Name -->
+
+				    <label for="name">Name</label>
+				    <input id="name" type="text" name="name" />
+                </div>
+                <div class="radioinput">
+                    <fieldset>
+
+                        <!-- Gender -->
+
+                        <legend>Gender</legend>
+                        <input id="genm" type="radio" name="gender" value="M" />
+                        <label for="genm">Male</label>
+                        <input id="genf" type="radio" name="gender" value="F" />
+                        <label for="genf">Female</label>
+                    </fieldset>
+                </div>
+
+                        <!-- Email -->
+
+                <div class="textinput">
+				    <label for="email">Email</label>
+				    <input id="email" type="text" name="email" />
+                </div>
+            </fieldset>
+            <fieldset>
+
+                <!-- Preferences -->
+
+                <legend>Preferences (Optional)</legend>
+                <article id="checkboxinput">
+
+                    <!-- Pizza -->
+
+                    <legend>Favourite Pizza</legend>
+                        <input type="checkbox" name="favpiz" value="Meat" />
+                        <label>Meat Lover</label>
+                        <input type="checkbox" name="favpiz" value="Cheese" />
+                        <label>Cheese Lover</label>
+                        <input type="checkbox" name="favpiz" value="Pepper" />
+                        <label>Pepperoni</label>
+                </article>
+                <br/>
+                <div id="selectinput">
+
+                    <!-- Crust -->
+
+                    <label>Choose a crust</label>
+                        <select name="Crust" id="cars">
+                            <option value="Thin">Thin</option>
+                            <option value="Thick">Thick</option>
+                            <option value="Deep Crust">Deep Crust</option>
+                            <option value="Stuffed">Stuffed</option>
+                            <option value="Deep Pan">Deep Pan</option>
+                        </select>
+                </div>
+
+               
+
+            </fieldset>
+            
+            <br/>
+		<div class="buttoninput">
+            <input type="submit" value="Register" />
+            <input type="reset" value="Reset" />
+		</div>
+	</form>  
+    
+        
+    </body>
+    </html>

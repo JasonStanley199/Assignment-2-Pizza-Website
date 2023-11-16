@@ -1,0 +1,89 @@
+  /* Body */
+
+  body                     {
+    background-color: white;
+                }
+
+main                     {
+    background-color: #39B7CD;
+                 }
+      
+
+
+/* Navigation Bar */
+
+ul                      {
+    list-style-type: none;
+    margin : none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e34234;
+    position: sticky;
+    float: right;
+                }
+
+li                      {
+    float: left;
+    width: 200px;
+                }
+
+li a                    {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 40px;
+    text-decoration: none;
+                }
+
+li a:hover:not(.active) {
+    background-color: #399cbd;
+                }
+
+.active                 {
+    background-color: purple;
+
+                }
+
+/* Logo */
+
+#logo                   {
+    font-family: cursive;
+    text-align: center;
+    font-size: 56px;
+    padding-top: 15px;
+
+                }
+
+/* form */
+form            {
+        width: 80%;
+                }
+
+    /* class and Id for forms */
+.order          {
+        float: left;
+                }
+
+select          {
+        width: 20em;
+                }   
+
+.label1         {
+        margin-left: 2em;
+                }
+
+#select1        {
+        width: 5em;
+                }
+
+.radioinput legend{
+    float: left;
+                }
+
+.radioinput input{
+    margin-left: 3em;
+                }
+
+.hide           {
+    display: none;
+                }

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Order Page</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Web Development" />
+        <meta name="keywords"    content="HTML and CSS" />
+        <meta name="author"      content="Jason Stanley" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style/order.css" rel="stylesheet"/>
+       
+        <script src="script/order.js"></script>
+        <script src="script/jquery-1.9.1.min.js"></script>
+    </head>
+    <body>
+        <header>   
+            <nav> 
+               <ul>
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="registration.html">Registration</a></li>
+                   <li><a class="active" href="order.html">Order</a></li>
+                   <li><a href="features.html">Features</a></li>      
+               </ul>
+           </nav>
+   
+           <!-- Logo -->
+           <div id="logo">
+               BRUNO PIZZERIA
+           </div>
+       </header> 
+       <br/>
+       <hr/>
+       <h1 style="background-color: powderblue; text-align: center;">ORDER HERE</h1>
+            <!-- Form -->
+            <form id="regform" method="post" 
+                action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php">
+            <fieldset>
+                <!-- Order -->
+                <legend>Your Order</legend>
+                <div class="order">
+                    <!-- Pizza -->
+                <label for="Pizza">Choose A Pizza:</label>
+                    <select name="Pizza" id="Pizza" required>
+                        <option value="">-</option>
+                        <option value="Meat Lover">Meat Lover</option>
+                        <option value="Cheese Lover">Cheese Lover</option>
+                        <option value="Pepperoni">Pepperoni</option>
+                    </select>
+                    <!-- Qty -->
+                <label class="label1">Qty</label>
+                    <select id="select1" name="Qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <!-- Crusts -->
+                <label id="label1">Choose A Crust:</label>
+                    <select name="Crust" id="Crust">
+                        <option value="Thin">Thin</option>
+                        <option value="Thick">Thick</option>
+                        <option value="Deep Crust">Deep Crust</option>
+                        <option value="Stuffed">Stuffed</option>
+                        <option value="Deep Pan">Deep Pan</option>
+                    </select>
+                </div>
+                <br/>
+                <br/>
+                    <!-- Additional Order -->
+                <div>
+                    <label>Additional Order:</label>
+                    <br/>
+                    <input id="Additional" type="text" name="Additional" size="80"/>
+                    <br/>
+                    <br/>
+                    <label>Delivery / Pickup:</label>
+                    <br/>
+                    <input type="radio" name="pick/deliv" value="pickup" onclick="show1();" id="pickup"/>
+                    Pickup
+                    <input type="radio" name="pick/deliv" value="deliver" onclick="show2();" id="online"/>
+                    Delivery
+                    <div id="div1" class="hide">
+                    <br/>
+                        <fieldset>
+                            <!-- Delivery Address -->
+                            <h3><u>Delivery Address</u></h3>
+                            <div>
+                                <!-- Street Name -->
+                                <label>Street Name: </label>
+                                <input id="stname" type="text" name="StName" size="50"/>
+                                <label class="label1">Street Number: </label>
+                                <input id="stno" type="text" name="StNumber" size="5"/>
+                                <br/>
+                                <br/>
+                                <!-- Suburbs -->
+                                <label>Suburbs: </label>
+                                <input id="sub" class="label1"  type="text" name="Suburbs" size="20"/>
+                                <label class="label1">Post Code: </label>
+                                <input id="post" type="text" name="PostCode" size="10"/>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                    
+                    <br/>
+            </fieldset>
+            <fieldset>
+                <!-- check out fields -->
+                <legend><b>Check Out</b></legend>
+
+                <!-- Contact -->
+
+                <h3><u>Contact</u></h3>
+                    <div>
+                        <!-- Phone No -->
+                        <label>Phone Number: </label>
+                        <input id="phone" type="text" name="PhoneNo" size="20"/>
+                        <label class="label1">Email: </label>
+                        <input id="email" type="text" name="Email" size="30"/>  
+                    </div> 
+                        <!-- Payment Method -->
+                <h3><u>Payment</u></h3>
+                    <input type="radio" name="payopt" value="payonpick" onclick="show3();" id="payonpick"/>
+                    Pay on pickup
+                    <input type="radio" name="payopt" value="payonline" onclick="show4();" id="payonline"/>
+                    Online
+                    <div id="div2" class="hide">
+                        <br/>
+                            <fieldset>
+                                <!-- Online Payment -->
+                                <legend>Online Payment</legend>
+                                <h3>Select card</h3>
+                                <select id="type" name="type">
+                                    <option value="">Select...</option>
+                                    <option value="visa">Visa</option>
+                                    <option value="master card">Master Card</option>
+                                    <option value="american express">American Express</option>
+                                  </select>
+                                  <p>
+                                      <!-- Name -->
+                                    <label>Name: </label>
+                                    <input type="text" name="name" pattern="[a-zA-Z ]+" size="40" maxlength="40" id="name">
+                                  </p>
+                                  <p>
+                                      <!-- Card Number -->
+                                    <label>Card Number: </label><input type="text" name="card" id="card" pattern="[0-9]{15,16}" size="16">
+                                  </p>
+                                  <p>
+                                      <!-- Expiration Number -->
+                                    <label>Expiration: </label><input type="text" name="exp" id="exp" pattern="[0-1][0-9]/[0-9]{2}" size="5" placeholder="01/10">
+                                    <label>  CVV: </label><input type="text" name="cvv" id="cvv" pattern="[0-9]{3}" size="3">
+                                  </p>
+                                        <!-- Billing Address -->
+                                    <label>Billing Address:</label>
+                                <input id="BillingAddress" type="text" name="billadd" size="50"/> 
+                                    <input type="checkbox"/> Same as Street Name
+                                </fieldset> 
+                                <br/>
+                    </div>
+                
+                </fieldset>
+            <br/> 
+                <div class="buttoninput">
+                    <input type="submit" value="Register" />
+                    <input type="reset" value="Reset" />
+                </div> 
+            </form>
+        
+    </body>
+    </html>

@@ -1,0 +1,139 @@
+        /* Body */
+body                     {
+        background-color: white;
+                        }
+        
+main                     {
+        background-color: #39B7CD;
+                         }
+  
+        /* Navigation Bar */
+
+ul                      {
+        list-style-type: none;
+        margin : none;
+        padding: 0;
+        overflow: hidden;
+        background-color: #e34234;
+        position: sticky;
+        float: right;
+                        }
+
+li                      {
+        float: left;
+        width: 200px;
+                        }
+  
+li a                    {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 30px 40px;
+        text-decoration: none;
+                        }
+  
+li a:hover:not(.active) {
+        background-color: purple;
+                        }
+  
+.active                 {
+        background-color:  #399cbd;
+
+                        }
+
+        /* Logo */
+
+#logo                   {
+            font-family: cursive;
+            text-align: center;
+            font-size: 56px;
+            padding-top: 15px;
+        
+                        }
+
+        /* Register Here Text */
+
+#registerhere           {
+            text-align: center;
+            font-family: 'Segoe UI' 
+                        }
+
+        
+        /* Form */
+
+form                    {          
+            width: 50em;
+            text-align: center;
+            margin-left: 350px;
+            font-family: 'Segoe UI' 
+                        }   
+
+label                   {
+            float: left;
+            text-align: right;
+            width: 10em;
+            margin-right: 1em;
+                        }
+
+input                   {
+            width: 50%;
+                        }
+
+/* Class for all inputs */
+
+.textinput              {
+            margin: 10px;
+            
+                }
+
+.radioinput fieldset    {
+            border: none;
+                        }
+
+.radioinput legend      {
+            float: left;
+            text-align: right;
+            width: 9em;
+            margin-left: 1em;
+                        }
+
+.radioinput input       {
+            width: 2em;		
+                        }
+
+.radioinput label       {
+            float: none;		
+            margin-right: 7em;	
+                        }
+
+.buttoninput            {
+            text-align: center;
+                        }
+
+.buttoninput input      {
+            width: 50em;
+                        }
+
+/* Id for all inputs */
+
+#checkboxinput legend      {
+            float: left;
+            text-align: right;
+            width: 9em;
+            margin-left: 1em;
+                             }
+
+#checkboxinput input       {
+            width: 2em;		
+                            }
+                        
+#checkboxinput label       {
+            float: none;		
+            margin-right: 0.5em;	
+                             }
+
+select {
+        width: 20em;
+        float: left;
+        margin-left: 8em;
+}
